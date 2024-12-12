@@ -1,0 +1,187 @@
+<%- include('navbar.ejs') %>
+		
+		<!-- Slider Area -->
+		<section class="hero-slider">
+			<!-- Single Slider -->
+			<div id="demo" class="carousel slide" data-ride="carousel">
+				<% for(var i=0;i<slides.length;i++) { %>
+				<div class="carousel-inner">
+					<div class="carousel-item <%= (i == 0) ? 'active' : '' %>">
+						<img src="uploads/<%= slides[i].slider_image %>" style="width:100%">
+						<div class="carousel-caption">
+						  <h3 style="text-shadow: 3px 3px 0px black, -3px -3px black;"><%= slides[i].slider_title %></h3>
+						  <br>
+						  <a href="<%= slides[i].slider_button_url%>">
+							<button class="btn btn-dark bg-white text-dark"><%= slides[i].slider_button_text %></button>
+						  </a>
+						</div>
+					  </div>
+					  
+				  <% } %> 
+				</div>
+				<a class="carousel-control-prev" href="#demo" data-slide="prev">
+				  <span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#demo" data-slide="next">
+				  <span class="carousel-control-next-icon"></span>
+				</a>
+			  </div>
+			<!--/ End Single Slider -->
+		</section>
+		<!--/ End Slider Area -->
+		
+		<!-- Start Small Banner  -->
+		<section class="small-banner section">
+			<div class="container-fluid">
+				<div class="row">
+					<!-- Single Banner  -->
+					<div class="col-lg-4 col-md-6 col-12">
+						<div class="single-banner">
+							<img src="https://e0.pxfuel.com/wallpapers/344/698/desktop-wallpaper-nike-basketball-shoes-gallery.jpg" alt="#">
+							<div class="content">
+								<p>Man's Collectons</p>
+								<h3>Summer travel <br> collection</h3>
+								<a href="#">Discover Now</a>
+							</div>
+						</div>
+					</div>
+					<!-- /End Single Banner  -->
+					<!-- Single Banner  -->
+					<div class="col-lg-4 col-md-6 col-12">
+						<div class="single-banner">
+							<img src="https://img.freepik.com/premium-vector/new-collection-christmas-fashion-sale-web-banner-template_187711-321.jpg?size=626&ext=jpg" alt="#">
+							<div class="content"> 
+								<p>Bag Collectons</p>
+								<h3>Awesome Bag <br> 2020</h3>
+								<a href="#">Shop Now</a>
+							</div>
+						</div>
+					</div>
+					<!-- /End Single Banner  -->
+					<!-- Single Banner  -->
+					<div class="col-lg-4 col-12">
+						<div class="single-banner tab-height">
+							<img src="https://e0.pxfuel.com/wallpapers/536/1007/desktop-wallpaper-basketball-shoes-sf-shoes-shop-banner-design-nike-basketball-shoes.jpg" alt="#">
+							<div class="content">
+								<p>Flash Sale</p>
+								<h3>Mid Season <br> Up to <span>40%</span> Off</h3>
+								<a href="#">Discover Now</a>
+							</div>
+						</div>
+					</div>
+					<!-- /End Single Banner  -->
+				</div>
+			</div>
+		</section>
+		<!-- End Small Banner -->
+		
+<br>
+<br>
+<br>
+<br>
+<br>
+
+		
+		<!-- Start Cowndown Area -->
+		<section class="cown-down">
+			<div class="section-inner ">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-6 col-12 padding-right">
+							<div class="image">
+								<img src="https://img.freepik.com/premium-vector/special-footwear-fashion-social-media-posts-design-premium-vector_409406-24.jpg" alt="#">
+							</div>	
+						</div>	
+						<div class="col-lg-6 col-12 padding-left">
+							<div class="content">
+								<div class="heading-block">
+									<p class="small-title">Deal of day</p>
+									<h3 class="title">Beatutyful dress for women</h3>
+									<p class="text">Suspendisse massa leo, vestibulum cursus nulla sit amet, frungilla placerat lorem. Cars fermentum, sapien. </p>
+									<h1 class="price">$1200 <s>$1890</s></h1>
+									<div class="coming-time">
+										<div class="clearfix" data-countdown="2021/02/30"></div>
+									</div>
+								</div>
+							</div>	
+						</div>	
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /End Cowndown Area -->
+		
+		<!-- Start Shop Blog  -->
+		<section class="shop-blog section">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="section-title">
+							<h2>From Our Blog</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<% for(var i=0;i<blogs.length;i++){%>
+					<div class="col-lg-4 col-md-6 col-12 <%= (i == 0) ? 'active' : '' %>">
+						<!-- Start Single Blog  -->
+						<div class="shop-single-blog">
+							<img src="uploads/<%=blogs[i].blog_image%>" width="100%" style="max-width: 400px;max-height: 400px;" > 
+							<div class="content">
+								<a href="#" class="title"><%=blogs[i].blog_title%></a>
+								<a href="#" class="more-btn"><%=blogs[i].blog_des%></a>
+							</div>
+						</div>
+						<!-- End Single Blog  -->
+					</div>
+					<% } %>
+				</div>
+			</div>
+		</section>
+		<!-- End Shop Blog  -->
+		
+		<!-- Start Shop Services Area -->
+		<section class="shop-services section home">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="ti-rocket"></i>
+							<h4>Free shiping</h4>
+							<p>Orders over $100</p>
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="ti-reload"></i>
+							<h4>Free Return</h4>
+							<p>Within 30 days returns</p>
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="ti-lock"></i>
+							<h4>Sucure Payment</h4>
+							<p>100% secure payment</p>
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="ti-tag"></i>
+							<h4>Best Peice</h4>
+							<p>Guaranteed price</p>
+						</div>
+						<!-- End Single Service -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Shop Services Area -->
+	<%- include('footer.ejs') %>
